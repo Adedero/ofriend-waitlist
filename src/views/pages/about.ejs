@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%-
+    include('../partials/_head', {
+      title: 'Ofriend - About',
+      head: null
+    })
+  %>
+  <body> 
+    <%- include('../partials/_header') %>
+    <main>
+      <section class="bg-gradient-to-b from-aqua-100 to-transparent py-5 px-5 lg:px-10">
+        <%- include('../partials/about/_about-top') %>
+      </section>
+
+      <section class="bg-midnight py-5 px-5 lg:px-10">
+        <%- include('../partials/about/_challeng-overview') %>
+      </section>
+
+      <%- include('../partials/_footer') %>
+    </main>
+    <script src="/scripts/pages/index.js"></script>
+  </body>
+</html>

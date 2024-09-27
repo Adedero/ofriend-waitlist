@@ -1,4 +1,7 @@
 const scrollProgress = document.getElementById("scroll-progress");
+const scrollTop = document.getElementById("scroll-top");
+
+scrollTop.onclick = () => scrollToTop();
 
 if (scrollProgress) {
 
@@ -54,20 +57,25 @@ function hideText(board) {
 const menuBtn = document.querySelector('#menu-btn');
 const navbar = document.querySelector('#nav-sm');
 const links_lg = document.querySelectorAll('.nav');
-const linkks_sm = document.querySelectorAll('.nav-sm');
+const links_sm = document.querySelectorAll('.nav-sm');
 
 menuBtn.addEventListener('click', () => {
   menuBtn.classList.toggle('active');
   navbar.classList.toggle('open');
 });
 
-links_lg.forEach((link, index) => {
-  if (window.location.href.includes(link.href)) {
-    link.classList.add('active')
+links_lg.forEach((link) => setActiveLink(link));
+links_sm.forEach((link) => setActiveLink(link));
+
+function setActiveLink(link) {
+  const currentPath = window.location.pathname;
+  const linkPath = new URL(link.href, window.location.origin).pathname;
+  if (currentPath === linkPath) {
+    link.classList.add('active');
   } else {
-    link.classList.remove('active')
+    link.classList.remove('active');
   }
-});
+}
 
 
 function scrollToTop() {

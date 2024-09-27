@@ -1,33 +1,33 @@
-<%-
-  include('../partials/_head', {
-    title: 'Ofriend - Home',
-    head: null
-  })
-%>
-<body>
-  <%- include('../partials/_progress') %>
-  
-  <%- include('../partials/_header') %>
-  <main>
-    <section id="hero" class="md:h-[calc(100dvh-4rem)] bg-gradient-to-b from-aqua-200 to-transparent py-5 px-5 lg:px-10">
-      <%- include('../partials/home/_hero') %>
-    </section>
+<!DOCTYPE html>
+<html lang="en">
+  <%-
+    include('../partials/_head', {
+      title: 'Ofriend - Home',
+      head: null
+    })
+  %>
+  <body> 
+    <%- include('../partials/_header') %>
+    <main>
+      <section id="hero" class="md:h-[calc(100dvh-4rem)] bg-gradient-to-b from-aqua-200 to-transparent py-5 px-5 lg:px-10">
+        <%- include('../partials/home/_hero') %>
+      </section>
 
-    <section id="why-choose-us" class="mt-10 py-5 px-5 lg:px-10">
-      <%- include('../partials/home/_why-choose-us') %>
-    </section>
+      <section id="why-choose-us" class="mt-10 py-5 px-5 lg:px-10">
+        <%- include('../partials/home/_why-choose-us') %>
+      </section>
 
-    <section id="skills" class="mt-10 py-5 px-5 lg:px-10">
-      <%- include('../partials/home/_skills') %>
-    </section>
+      <section id="skills" class="mt-10 py-5 px-5 lg:px-10">
+        <%- include('../partials/home/_skills') %>
+      </section>
 
-    <section id="testimonials" class="mt-10 py-5 px-5 lg:px-10">
-      <%- include('../partials/home/_testimonials') %>
-    </section>
+      <section id="testimonials" class="mt-10 py-5 px-5 lg:px-10">
+        <%- include('../partials/home/_testimonials') %>
+      </section>
 
-    <%- include('../partials/_footer') %>
+      <%- include('../partials/_footer') %>
 
-  </main>
-  <script src="/scripts/pages/index.js"></script>
-</body>
+    </main>
+    <script src="/scripts/pages/index.js"></script>
+  </body>
 </html>
