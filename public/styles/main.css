@@ -929,6 +929,10 @@ video {
   background-color: rgb(0 19 43 / var(--tw-bg-opacity));
 }
 
+.bg-midnight\/30 {
+  background-color: rgb(0 19 43 / 0.3);
+}
+
 .bg-midnight\/50 {
   background-color: rgb(0 19 43 / 0.5);
 }
@@ -956,15 +960,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-midnight\/30 {
-  background-color: rgb(0 19 43 / 0.3);
-}
-
-.bg-aqua-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(10 163 199 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-b {
