@@ -19,5 +19,7 @@ app.set('views', __dirname + '/views');
 
 app.use('/', routeHandler);
 
-app.listen(PORT, () => console.log(`Server started on http://localhost:${PORT}`));
+app.listen(PORT, () => {
+  console.log(`Server started on ${process.env.NODE_ENV === 'production' ? `port ${PORT}` : `http://localhost:${PORT}`}`)
+});
 

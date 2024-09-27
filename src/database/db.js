@@ -17,7 +17,7 @@ const db_init = async () => {
   }
 }
 
-//db_init();
+db_init();
 
 
 module.exports = sequelize;
