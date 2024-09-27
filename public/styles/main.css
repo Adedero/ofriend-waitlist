@@ -846,6 +846,10 @@ video {
   gap: 1.25rem;
 }
 
+.gap-4 {
+  gap: 1rem;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1210,7 +1214,7 @@ body {
   transform: translateX(4px);
 }
 
-.menu-btn.active > div:nth-child(1) {
+.menu-btn.active>div:nth-child(1) {
   transform: rotate(45deg) translateY(4px);
 }
 
@@ -1461,8 +1465,7 @@ body {
 
 .btn.outlined,
 .btn-outlined,
-.btn-primary.outlined
-.btn-primary-outlined {
+.btn-primary.outlined .btn-primary-outlined {
   --tw-border-opacity: 1;
   border-color: rgb(0 19 43 / var(--tw-border-opacity));
   background-color: transparent;
@@ -1485,8 +1488,7 @@ body {
 
 .btn.outlined::before,
 .btn-outlined::before,
-.btn-primary.outlined
-.btn-primary-outlined::before {
+.btn-primary.outlined .btn-primary-outlined::before {
   position: absolute;
   top: 0px;
   right: -1.25rem;
@@ -1506,8 +1508,7 @@ body {
 
 .btn.outlined:hover::before,
 .btn-outlined:hover::before,
-.btn-primary.outlined
-.btn-primary-outlined:hover::before {
+.btn-primary.outlined .btn-primary-outlined:hover::before {
   content: var(--tw-content);
   --tw-translate-x: 0px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1587,7 +1588,7 @@ body {
 }
 
 .hero-board__text.rotated {
-  writing-mode:sideways-lr;
+  writing-mode: sideways-lr;
   transform: translateX(1.8rem) translateY(-1.8rem);
 }
 
