@@ -719,6 +719,22 @@ video {
   height: 100%;
 }
 
+.h-\[60rem\] {
+  height: 60rem;
+}
+
+.h-\[50rem\] {
+  height: 50rem;
+}
+
+.h-\[40rem\] {
+  height: 40rem;
+}
+
+.h-\[36rem\] {
+  height: 36rem;
+}
+
 .min-h-32 {
   min-height: 8rem;
 }
@@ -1935,6 +1951,22 @@ body {
 
   .md\:h-\[calc\(100dvh-4rem\)\] {
     height: calc(100dvh - 4rem);
+  }
+
+  .md\:h-\[32rem\] {
+    height: 32rem;
+  }
+
+  .md\:h-\[28rem\] {
+    height: 28rem;
+  }
+
+  .md\:h-\[26rem\] {
+    height: 26rem;
+  }
+
+  .md\:h-\[27rem\] {
+    height: 27rem;
   }
 
   .md\:w-1\/2 {
