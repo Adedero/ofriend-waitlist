@@ -9,12 +9,24 @@
   <body> 
     <%- include('../partials/_header') %>
     <main>
-      <section class="bg-gradient-to-b from-aqua-100 to-transparent py-5 px-5 lg:px-10">
+      <section class="bg-gradient-to-b from-aqua-100/80 to-white py-5 px-5 lg:px-10">
         <%- include('../partials/about/_about-top') %>
       </section>
 
-      <section class="bg-midnight py-5 px-5 lg:px-10">
-        <%- include('../partials/about/_challeng-overview') %>
+      <section class="bg-midnight py-5 px-5 lg:px-10 mt-12">
+        <%- include('../partials/about/_challenge-overview') %>
+      </section>
+
+      <section class="py-5 px-5 lg:px-10 mt-12">
+        <%- include('../partials/about/_our-approach') %>
+      </section>
+
+      <section class="py-5 px-5 lg:px-10 mt-12">
+        <%- include('../partials/about/_who-we-serve') %>
+      </section>
+
+      <section class="py-5 px-5 lg:px-10">
+        <%- include('../partials/about/_team') %>
       </section>
 
       <%- include('../partials/_footer') %>
