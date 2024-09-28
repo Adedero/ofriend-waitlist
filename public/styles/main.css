@@ -602,12 +602,12 @@ video {
   z-index: 100;
 }
 
-.z-\[5\] {
-  z-index: 5;
-}
-
 .z-\[200\] {
   z-index: 200;
+}
+
+.z-\[5\] {
+  z-index: 5;
 }
 
 .my-2 {
@@ -719,22 +719,6 @@ video {
   height: 100%;
 }
 
-.h-\[60rem\] {
-  height: 60rem;
-}
-
-.h-\[50rem\] {
-  height: 50rem;
-}
-
-.h-\[40rem\] {
-  height: 40rem;
-}
-
-.h-\[36rem\] {
-  height: 36rem;
-}
-
 .min-h-32 {
   min-height: 8rem;
 }
@@ -771,6 +755,10 @@ video {
   width: 5rem;
 }
 
+.w-24 {
+  width: 6rem;
+}
+
 .w-4 {
   width: 1rem;
 }
@@ -805,14 +793,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-28 {
-  width: 7rem;
-}
-
-.w-24 {
-  width: 6rem;
 }
 
 .max-w-\[48rem\] {
@@ -857,14 +837,6 @@ video {
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -929,10 +901,6 @@ video {
 
 .gap-5 {
   gap: 1.25rem;
-}
-
-.gap-y-5 {
-  row-gap: 1.25rem;
 }
 
 .overflow-hidden {
@@ -1212,6 +1180,10 @@ video {
   text-transform: uppercase;
 }
 
+.leading-5 {
+  line-height: 1.25rem;
+}
+
 .leading-6 {
   line-height: 1.5rem;
 }
@@ -1222,10 +1194,6 @@ video {
 
 .leading-\[2\.75rem\] {
   line-height: 2.75rem;
-}
-
-.leading-5 {
-  line-height: 1.25rem;
 }
 
 .text-aqua {
@@ -1953,22 +1921,6 @@ body {
     height: calc(100dvh - 4rem);
   }
 
-  .md\:h-\[32rem\] {
-    height: 32rem;
-  }
-
-  .md\:h-\[28rem\] {
-    height: 28rem;
-  }
-
-  .md\:h-\[26rem\] {
-    height: 26rem;
-  }
-
-  .md\:h-\[27rem\] {
-    height: 27rem;
-  }
-
   .md\:w-1\/2 {
     width: 50%;
   }
@@ -1994,16 +1946,12 @@ body {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .md\:grid-cols-5 {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-  }
-
   .md\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .md\:grid-cols-8 {
-    grid-template-columns: repeat(8, minmax(0, 1fr));
+  .md\:grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
   .md\:flex-row {
