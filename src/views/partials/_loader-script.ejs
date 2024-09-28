@@ -1,0 +1,21 @@
+<script defer>
+  const loader = document.querySelector('#loader');
+ 
+  window.addEventListener('load', () => {
+    loader.classList.add('close');
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    loader.classList.add('close');
+  });
+
+  window.addEventListener('beforeunload', () => {
+    loader.classList.add('close');
+  });
+
+  window.addEventListener('pageshow', (event) => {
+    if (event.persisted) {
+      loader.classList.add('close');
+    }
+  });
+</script>

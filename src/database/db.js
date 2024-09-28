@@ -10,13 +10,12 @@ const sequelize = new Sequelize({
 const db_init = async () => {
   try {
     await sequelize.authenticate();
-    await sequelize.sync({ alter: true });
+    await sequelize.sync({ force: true });
     console.log('Database connection established.');
   } catch (error) {
     console.error('Unable to connect to the database:', error);
   }
 }
-
 db_init();
 
 

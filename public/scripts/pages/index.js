@@ -1,20 +1,67 @@
-const scrollProgress = document.getElementById("scroll-progress");
+const loader = document.querySelector('#loader');
+
+window.addEventListener('load', () => {
+  loader.classList.add('close');
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  loader.classList.add('close');
+});
+
+window.addEventListener('beforeunload', () => {
+  loader.classList.add('close');
+});
+
+window.addEventListener('pageshow', (event) => {
+  if (event.persisted) {
+    loader.classList.add('close');
+  }
+});
+
+//Button that scrolls to the top of the page
 const scrollTop = document.getElementById("scroll-top");
-
 scrollTop.onclick = () => scrollToTop();
-
-if (scrollProgress) {
-
-  const height =
-    document.documentElement.scrollHeight - document.documentElement.clientHeight;
-
-  window.addEventListener("scroll", () => {
-    const scrollTop =
-      document.body.scrollTop || document.documentElement.scrollTop;
-    scrollProgress.style.width = `${(scrollTop / height) * 100}%`;
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
   });
 }
 
+
+function useLoader(loader) {
+  if (loader) {
+    return {
+      open() {
+        loader.classList.remove('close');
+      },
+      close() {
+        loader.classList.add('close');
+      }
+    }
+  } else {
+    return {
+      open() {},
+      close() {}
+    }
+  }
+}
+
+const waitlistForm = document.querySelector('#waitlist-form');
+const waitlistSubmitBtn = document.querySelector('#waitlist-btn');
+const waitlistName = document.querySelector('#w-name');
+const waitlistEmail = document.querySelector('#w-email');
+
+waitlistForm.addEventListener('submit', handleSubmit);
+
+function handleSubmit() {
+  useLoader(loader).open();
+  //waitlistName.value = '';
+  //waitlistEmail.value = '';
+}
+
+
+//Hiver effect on the images on the home page hero section
 const heroBoards = document.querySelectorAll('.hero-board');
 
 heroBoards.forEach((board) => {
@@ -78,9 +125,10 @@ function setActiveLink(link) {
 }
 
 
-function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior:'smooth'
-  });
-}
+const backBtn = document.querySelectorAll('.back-btn');
+backBtn.forEach(btn => {
+  btn.onclick = () => window.history.back();
+})
+
+
+

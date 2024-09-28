@@ -17,22 +17,39 @@ router.get('/about', (req, res) => {
 //Database
 router.use(limiter).post('/subscribe', async (req, res) => {
   const { name, email } = req.body;
-  console.log(req.headers);
-  /* 
   try {
     const user = await User.create({ name, email });
+    const response = {
+      success: true,
+      user,
+      message: 'Thank you for subscribing!'
+    }
+    res.render('pages/response', { response });
   } catch (error) {
+    console.log(error);
+    
     if (error instanceof UniqueConstraintError) {
       if (error.errors.some(e => e.path === 'email')) {
-        const previousPage = req.headers.referer || '/';
-
-        res.render(previousPage, {
-          error: true,
-          errorMessage: 'This email address is already in use!'
-        });
+        const response = {
+          success: false,
+          uniqueConstraintError: true,
+          name,
+          email,
+          message: 'Email address already exists!'
+        }
+        res.render('pages/response', { response });
+        return
       }
     }
-  } */
+    const response = {
+      success: false,
+      uniqueConstraintError: false,
+      name,
+      email,
+      message: 'An error occurred while subscribing. Please try again later.'
+    }
+    res.render('pages/response', { response });
+  }
 });
 
 module.exports = router;

@@ -5,21 +5,21 @@
       <p class="font-semibold text-3xl">Don't Miss Out!</p>
       <p class="mt-2 text-sm">Stay in touch to get the latest updates and exciting offers.We won't spam you.</p>
 
-      <form action="/subscribe" class="mt-4" method="POST" id="waitlst-form">
+      <form action="/subscribe" class="mt-4" method="POST" id="waitlist-form">
         <div class="grid md:grid-cols-3 lg:grid-cols-2 items-center gap-3">
           <div class="grid gap-1">
             <label for="name" class="font-medium text-sm">NAME <span>*</span></label>
-            <input class="input" type="text" id="name" name="name" placeholder="Enter your name" required>
+            <input class="input" type="text" id="w-name" name="name" placeholder="Enter your name" required>
           </div>
       
           <div class="grid gap-1">
             <label for="email" class="font-medium text-sm">EMAIL ADDRESS <span>*</span></label>
-            <input class="input" type="email" id="email" name="email" placeholder="Enter your email" required>
+            <input class="input" type="email" id="w-email" name="email" placeholder="Enter your email" required>
           </div>
       
           <div class="lg:col-span-2">
             <p class="opacity-0 select-none cursor-context-menu font-medium text-sm lg:hidden">BUTTON</p>
-            <button type="submit" class="btn-accent outlined w-full">Subscribe</button>
+            <button type="submit" id="waitlist-btn" class="btn-accent outlined w-full">Subscribe</button>
           </div>
         </div>      
       </form>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/_head', { title: 'Ofriend - Response' , head: null }) %>
+
+  <body>
+    <%- include('../partials/_loader') %>
+      <%- include('../partials/_header') %>
+        <main>
+          <section class="h-[calc(100dvh-4rem)] bg-gradient-to-b from-aqua-200/50 to-transparent">
+            <%- include('../partials/_response-message'), { response } %>
+          </section>
+
+          <%- include('../partials/_footer') %>
+        </main>
+        <script src="/scripts/pages/index.js"></script>
+  </body>
+
+</html>

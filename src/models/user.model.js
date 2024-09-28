@@ -4,6 +4,12 @@ const sequelize = require('../database/db');
 const User = sequelize.define(
   'User',
   {
+    id: {
+      type: DataTypes.UUID,
+      allowNull: false,
+      primaryKey: true,
+      defaultValue: DataTypes.UUIDV4
+    },
     name: {
       type: DataTypes.STRING(255),
       allowNull: false,
@@ -16,7 +22,7 @@ const User = sequelize.define(
       allowNull: false,
       unique: true,
       validate: {
-        isEmail: true,
+        //isEmail: true,
         max: 255
       }
     },
