@@ -1244,6 +1244,18 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-midnight\/30 {
+  --tw-gradient-from: rgb(0 19 43 / 0.3) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(0 19 43 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-midnight\/80 {
+  --tw-gradient-from: rgb(0 19 43 / 0.8) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(0 19 43 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .from-10\% {
   --tw-gradient-from-position: 10%;
 }
@@ -1256,6 +1268,11 @@ video {
 .via-aqua\/50 {
   --tw-gradient-to: rgb(17 200 243 / 0)  var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), rgb(17 200 243 / 0.5) var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
+.via-aqua\/30 {
+  --tw-gradient-to: rgb(17 200 243 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), rgb(17 200 243 / 0.3) var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 
 .to-transparent {

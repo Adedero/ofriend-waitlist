@@ -4,7 +4,10 @@
     <p class="text-aqua-600 font-semibold text-lg md:hidden">Who are we?</p>
 
     <div class="relative mt-2 h-[29rem] md:mt-0 lg:h-[68dvh] lg:pr-20">
-      <div class="rounded-2xl bg-slate-300 h-full w-full max-w-[42rem] lg:ml-auto"></div>
+      <div class="relative rounded-2xl bg-slate-300 h-full w-full max-w-[42rem] lg:ml-auto overflow-hidden">
+        <div class="w-full h-full absolute top-0 left-0 bg-gradient-to-t from-midnight/80 via-aqua/30 to-transparent"></div>
+        <img src="/assets/images/students-9.jpg" alt="students" class="w-full h-full object-cover">
+      </div>
 
       <div class="absolute hidden right-0 bottom-5 lg:grid lg:gap-4">
         <%- include('../_mission') %>
