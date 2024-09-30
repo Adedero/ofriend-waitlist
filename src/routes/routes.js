@@ -28,8 +28,10 @@ router.get('/contact', (req, res) => {
 //Database
 router.use(limiter).post('/subscribe', async (req, res) => {
   const { name, email } = req.body;
+  const trimmedName = name.trim();
+  const trimmedEmail = email.trim();
   try {
-    const user = await User.create({ name, email });
+    const user = await User.create({ name: trimmedName, email: trimmedEmail });
     const response = {
       success: true,
       user,
@@ -44,8 +46,6 @@ router.use(limiter).post('/subscribe', async (req, res) => {
         const response = {
           success: false,
           uniqueConstraintError: true,
-          name,
-          email,
           message: 'Email address already exists!'
         }
         res.render('pages/response', { response });
@@ -55,8 +55,6 @@ router.use(limiter).post('/subscribe', async (req, res) => {
     const response = {
       success: false,
       uniqueConstraintError: false,
-      name,
-      email,
       message: 'An error occurred while subscribing. Please try again later.'
     }
     res.render('pages/response', { response });
@@ -65,7 +63,7 @@ router.use(limiter).post('/subscribe', async (req, res) => {
 
 router.use(limiter).post('/register', async (req, res) => {
   console.log(req.body);
-  const {
+  let {
     firstName,
     lastName,
     email,
@@ -73,6 +71,11 @@ router.use(limiter).post('/register', async (req, res) => {
     course,
     emailConsent,
   } = req.body;
+
+  firstName = firstName.trim();
+  lastName = lastName.trim();
+  email = email.trim();
+  phoneNumber = phoneNumber.trim();
 
   try {
     await sequelize.transaction(async (transaction) => {

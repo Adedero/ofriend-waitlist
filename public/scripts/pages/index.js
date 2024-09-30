@@ -106,6 +106,14 @@ const navbar = document.querySelector('#nav-sm');
 const links_lg = document.querySelectorAll('.nav');
 const links_sm = document.querySelectorAll('.nav-sm');
 
+window.addEventListener('scroll', () => {
+  if (window.scrollY >= 160) {
+    navbar.classList.add('top-16')
+  } else {
+    navbar.classList.remove('top-16')
+  }
+});
+
 menuBtn.addEventListener('click', () => {
   menuBtn.classList.toggle('active');
   navbar.classList.toggle('open');
