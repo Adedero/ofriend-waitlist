@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
   res.render('pages/index')
 });
 
-router.get('/about', (req, res) => {
+/* router.get('/about', (req, res) => {
   res.render('pages/about')
 });
 
@@ -21,7 +21,7 @@ router.get('/bootcamp', (req, res) => {
 
 router.get('/contact', (req, res) => {
   res.render('pages/contact')
-});
+}); */
 
 
 
