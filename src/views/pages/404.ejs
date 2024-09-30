@@ -10,8 +10,23 @@
     <%- include('../partials/_loader') %>
     <%- include('../partials/_header') %>
     <main>
-      <section class="bg-gradient-to-b from-aqua-100/80 to-white py-5 px-5 lg:px-10">
-        404
+      <section class="bg-gradient-to-b from-aqua-100/80 to-white py-5 px-5 md:px-10 lg:px-32 md:h-[calc(100dvh-12rem)] flex flex-col gap-10 md:flex-row md:gap-16 items-center md:justify-between">
+        <div class="order-2 md:order-1 md:max-w-[45%] flex flex-col items-center justify-center md:block">
+          <p class="text-2xl font-semibold">Page Not Found.</p>
+          <p class="mt-2 text-sm text-center md:text-left">The page you're looking for does not exist. You may have mistyped the address or the page may have been moved</p>
+
+          <div class="mt-4 flex items-center gap-2 text-sm">
+            <a href="/">
+              <button type="button" class="btn">Take me home.</button>
+            </a>
+
+            <button type="button" class="back-btn btn outlined">I want to go back.</button>
+          </div>
+        </div>
+
+        <div class="order-1 md:order-2 text-[10rem] xl:text-[12rem] font-light">
+          404
+        </div>
       </section>
 
       <%- include('../partials/_footer') %>
