@@ -26,6 +26,10 @@ const User = sequelize.define(
         max: 255
       }
     },
+   /*  bootcampOnly: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    } */
   }
 );
 

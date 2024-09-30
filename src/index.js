@@ -30,6 +30,9 @@ app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 
 app.use('/', routeHandler);
+app.use(function (req, res) {
+  res.status(404).render('pages/404');
+});
 
 app.listen(PORT, () => {
   console.log(`Server started on ${process.env.NODE_ENV === 'production' ? `port ${PORT}` : `http://localhost:${PORT}`}`)

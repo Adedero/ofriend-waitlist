@@ -1,0 +1,54 @@
+<div class="flex flex-col items-center justify-center">
+  <h2 class="flex-shrink-0 text-center text-3xl text-midnight font-semibold">
+    Register Now.
+  </h2>
+
+  <div class="bg-aqua-100/20 flex-shrink-0 mt-4 border rounded-lg p-5 lg:p-8 w-full max-w-[40rem] shadow">
+    <form action="/register" method="POST" id="registration-form">
+      <div class="grid md:grid-cols-2 gap-3">
+        <div class="grid gap-1">
+          <label for="first-name" class="font-medium text-sm">FIRST NAME <span>*</span></label>
+          <input class="input outlined" type="text" id="first-name" name="firstName" required>
+        </div>
+
+        <div class="grid gap-1">
+          <label for="last-name" class="font-medium text-sm">LAST NAME <span>*</span></label>
+          <input class="input outlined" type="text" id="last-name" name="lastName" required>
+        </div>
+
+        <div class="grid gap-1 md:col-span-2">
+          <label for="email" class="font-medium text-sm">EMAIL ADDRESS <span>*</span></label>
+          <input class="input outlined" type="email" id="email" name="email" required>
+        </div>
+
+        <div class="grid gap-1">
+          <label for="number" class="font-medium text-sm">WHATSAPP NUMBER <span>*</span></label>
+          <input class="input outlined" type="tel" id="number" name="phoneNumber" required>
+        </div>
+
+        <div class="grid gap-1">
+          <label for="course" class="font-medium text-sm">COURSE <span>*</span></label>
+          <select class="input outlined" name="course" id="course" required>
+            <option value="ui-ux">UI/UX</option>
+            <option value="front-end">Front-end Web Development</option>
+            <option value="back-end">Back-end Web Development</option>
+          </select>
+        </div>
+
+        <div class="md:col-span-2">
+          <input type="checkbox" name="emailConsent" id="email-consent" checked class="accent-aqua">
+          <label for="email-consent" class="font-medium text-sm">
+            Keep me updated on all information about the bootcamp. 
+            <p class="text-xs text-slate-500">You will be added to the Ofriend mailing list and will only receive emails about the bootcamp.</p>
+          </label>
+        </div>
+
+        <div class="md:col-span-2 mt-4">
+          <button type="submit" id="waitlist-btn" class="btn w-full">Register</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  </div>
+</div>

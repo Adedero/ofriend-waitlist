@@ -128,7 +128,8 @@ function setActiveLink(link) {
 const backBtn = document.querySelectorAll('.back-btn');
 backBtn.forEach(btn => {
   btn.onclick = () => window.history.back();
-})
+});
+
 
 
 

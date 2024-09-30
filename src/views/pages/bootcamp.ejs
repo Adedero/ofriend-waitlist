@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%-
+    include('../partials/_head', {
+      title: 'Ofriend - Bootcamp',
+      head: null
+    })
+  %>
+  <body> 
+    <%- include('../partials/_loader') %>
+    <%- include('../partials/_header') %>
+    <main>
+      <% if (response) { %>
+       <%- include('../partials/bootcamp/_registration-message', { response }) %>
+      <% } %>
+
+      <section class="bg-gradient-to-b from-aqua-100/80 to-white py-5 px-5 lg:px-10">
+        <%- include('../partials/bootcamp/_bootcamp-top') %>
+      </section>
+
+      <section class="py-5 px-5 lg:px-10 mt-10">
+        <%- include('../partials/bootcamp/_what-you-get') %>
+      </section>
+
+      <section class="py-5 px-5 lg:px-10 mt-10">
+        <%- include('../partials/bootcamp/_featured-courses') %>
+      </section>
+
+      <section id="register" class="py-5 px-5 lg:px-10 mt-10">
+        <%- include('../partials/bootcamp/_bootcamp-register') %>
+      </section>
+
+
+      <%- include('../partials/_footer') %>
+    </main>
+    <script src="/scripts/pages/index.js"></script>
+  </body>
+</html>

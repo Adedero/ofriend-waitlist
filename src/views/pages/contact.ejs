@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%-
+    include('../partials/_head', {
+      title: 'Ofriend - Contact',
+      head: null
+    })
+  %>
+  <body> 
+    <%- include('../partials/_loader') %>
+    <%- include('../partials/_header') %>
+    <main>
+      <section>
+        <%- include('../partials/contact/_contact-header') %>
+      </section>
+
+      <section class="py-5 px-5 lg:px-10 mt-10">
+        <%- include('../partials/contact/_contacts-and-socials') %>
+      </section>
+
+      <%- include('../partials/_footer') %>
+    </main>
+    <script src="/scripts/pages/index.js"></script>
+  </body>
+</html>
