@@ -130,6 +130,38 @@ backBtn.forEach(btn => {
   btn.onclick = () => window.history.back();
 });
 
+//Countdown timer
+const daysElement = document.querySelector('#days');
+const hoursElement = document.querySelector('#hours');
+const minutesElement = document.querySelector('#minutes');
+const secondsElement = document.querySelector('#seconds');
+
+
+// Set the target date and time
+const targetDate = new Date('November 10, 2024 23:59:59').getTime();
+
+// Function to update the countdown every second
+const countdown = setInterval(() => {
+  const now = new Date().getTime();  // Current time
+  const timeRemaining = targetDate - now;  // Time difference
+
+  // Calculate days, hours, minutes, and seconds
+  const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+  // Update the HTML content
+  daysElement.textContent = days;
+  hoursElement.textContent = hours;
+  minutesElement.textContent = minutes;
+  secondsElement.textContent = seconds;
+
+  // If the countdown is over, stop the interval and display a message
+  if (timeRemaining < 0) {
+    clearInterval(countdown);
+  }
+}, 1000); 
 
 
 
