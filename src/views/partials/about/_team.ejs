@@ -3,14 +3,17 @@
 
   <div class="mt-8 grid gap-5 place-content-center grid-cols-2 md:grid-cols-4">
 
-    <% for( let i = 0; i < 8; i++ ) { %>
-      <div data-aos="flip-left" data-aos-delay="<%= 50 + 100*i %>" class="flex flex-col items-center justify-center text-center gap-2">
-        <div class="w-24 aspect-square bg-midnight rounded-full"></div>
+    <% team.forEach((member, i) => { %>
+      <div data-aos="flip-left" data-aos-delay="<%= 50 + 100*i %>"
+        class="flex flex-col items-center justify-center text-center gap-2">
+        <div class="w-24 aspect-square bg-slate-300 rounded-full overflow-hidden border">
+          <img src="<%= member.image %>" alt="<%= member.name %>" class="w-full h-full object-cover">
+        </div>
         <div class="leading-5">
-          <p class="font-bold">John Doe</p>
-          <p class="text-sm">Position</p>
+          <p class="font-bold"><%= member.name %></p>
+          <p class="text-sm"><%= member.position %></p>
         </div>
       </div>
-    <% } %>
+    <% }) %>
   </div>
 </div>

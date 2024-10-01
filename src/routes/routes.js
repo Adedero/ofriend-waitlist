@@ -5,6 +5,7 @@ const User = require('../models/user.model');
 const Bootcamp = require('../models/bootcamp.model');
 const { UniqueConstraintError } = require('sequelize');
 const sequelize = require('../database/db');
+const team = require('../database/team');
 
 //Pages
 router.get('/', (req, res) => {
@@ -12,7 +13,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/about', (req, res) => {
-  res.render('pages/about', { nonce: res.locals.nonce })
+  res.render('pages/about', { nonce: res.locals.nonce, team })
 });
 
 router.get('/bootcamp', (req, res) => {
