@@ -8,20 +8,20 @@ const sequelize = require('../database/db');
 
 //Pages
 router.get('/', (req, res) => {
-  res.render('pages/index')
+  res.render('pages/index', { nonce: res.locals.nonce })
 });
 
-/* router.get('/about', (req, res) => {
-  res.render('pages/about')
+router.get('/about', (req, res) => {
+  res.render('pages/about', { nonce: res.locals.nonce })
 });
 
 router.get('/bootcamp', (req, res) => {
-  res.render('pages/bootcamp', { response: false })
+  res.render('pages/bootcamp', { nonce: res.locals.nonce, response: false })
 });
 
 router.get('/contact', (req, res) => {
-  res.render('pages/contact')
-}); */
+  res.render('pages/contact', { nonce: res.locals.nonce })
+});
 
 
 

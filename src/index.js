@@ -6,11 +6,26 @@ const express = require('express');
 const PORT = process.env.PORT || 4400;
 const routeHandler = require('./routes/routes');
 const helmet = require('helmet');
+const crypto = require('crypto');
 
 const app = express();
 
 //Middleware
-app.use(helmet());
+app.use((req, res, next) => {
+  res.locals.nonce = crypto.randomBytes(16).toString('base64');
+  next();
+});
+
+app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'", "https://unpkg.com", (req, res) => `'nonce-${res.locals.nonce}'`],
+      objectSrc: ["'none'"],
+      upgradeInsecureRequests: [],
+    },
+  })
+);
 
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", req.header('origin'));
