@@ -752,8 +752,8 @@ video {
   height: 0.75rem;
 }
 
-.h-40 {
-  height: 10rem;
+.h-44 {
+  height: 11rem;
 }
 
 .h-60 {
@@ -790,10 +790,6 @@ video {
 
 .h-full {
   height: 100%;
-}
-
-.h-44 {
-  height: 11rem;
 }
 
 .min-h-32 {
@@ -1549,16 +1545,16 @@ video {
   transition-delay: 0s !important;
 }
 
+.\!duration-300 {
+  transition-duration: 300ms !important;
+}
+
 .duration-300 {
   transition-duration: 300ms;
 }
 
 .duration-500 {
   transition-duration: 500ms;
-}
-
-.\!duration-300 {
-  transition-duration: 300ms !important;
 }
 
 :root {
@@ -2673,14 +2669,14 @@ body {
     content: var(--tw-content);
   }
 
-  .lg\:hover\:-translate-y-5:hover {
-    --tw-translate-y: -1.25rem;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  }
-
   .lg\:hover\:\!-translate-y-5:hover {
     --tw-translate-y: -1.25rem !important;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
+  }
+
+  .lg\:hover\:-translate-y-5:hover {
+    --tw-translate-y: -1.25rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .lg\:hover\:bg-midnight:hover {
