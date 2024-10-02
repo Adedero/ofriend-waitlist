@@ -788,8 +788,8 @@ video {
   height: 70dvh;
 }
 
-.h-\[calc\(100dvh-4rem\)\] {
-  height: calc(100dvh - 4rem);
+.h-\[calc\(100dvh-10rem\)\] {
+  height: calc(100dvh - 10rem);
 }
 
 .h-dvh {
@@ -798,10 +798,6 @@ video {
 
 .h-full {
   height: 100%;
-}
-
-.h-\[calc\(100dvh-10rem\)\] {
-  height: calc(100dvh - 10rem);
 }
 
 .min-h-32 {
