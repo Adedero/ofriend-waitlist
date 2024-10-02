@@ -14,13 +14,16 @@
   "description": "",
   "dependencies": {
     "@fontsource-variable/montserrat": "^5.1.0",
+    "cookie-parser": "^1.4.6",
     "ejs": "^3.1.10",
     "express": "^4.21.0",
     "express-rate-limit": "^7.4.0",
     "helmet": "^7.1.0",
     "primeicons": "^7.0.0",
     "sequelize": "^6.37.3",
-    "sqlite3": "^5.1.7"
+    "sqlite3": "^5.1.7",
+    "uuid": "^10.0.0",
+    "winston": "^3.14.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",

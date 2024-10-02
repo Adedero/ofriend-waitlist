@@ -1,14 +1,10 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('../database/db');
-
-const User = sequelize.define(
-  'Bootcamp',
-  {
+module.exports = (sequelize, DataTypes) => {
+  const Bootcamp = sequelize.define('Bootcamp', {
     id: {
       type: DataTypes.UUID,
       allowNull: false,
       primaryKey: true,
-      defaultValue: DataTypes.UUIDV4
+      defaultValue: DataTypes.UUIDV4,
     },
     firstName: {
       type: DataTypes.STRING(255),
@@ -31,9 +27,8 @@ const User = sequelize.define(
     course: {
       type: DataTypes.STRING(255),
       allowNull: false,
-    }
-  }
-);
+    },
+  });
 
-
-module.exports = User;
+  return Bootcamp;
+};

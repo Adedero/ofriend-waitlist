@@ -23,7 +23,7 @@
       </section>
 
       <section id="featured-courses" class="py-5 px-5 lg:px-10 mt-10">
-        <%- include('../partials/bootcamp/_featured-courses') %>
+        <%- include('../partials/bootcamp/_featured-courses', { courses }) %>
       </section>
 
       <section id="register" class="py-5 px-5 lg:px-10 mt-10">
@@ -32,7 +32,11 @@
 
 
       <%- include('../partials/_footer') %>
+      <% if (!cookieSession) { %>
+        <%- include('../partials/_cookie-notice') %>
+      <% } %>
     </main>
     <script src="/scripts/pages/index.js"></script>
+    <%- include("../partials/_aos-init", { nonce }) %>
   </body>
 </html>

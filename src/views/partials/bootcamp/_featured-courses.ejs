@@ -9,96 +9,40 @@
 
   <div class="mt-6 grid gap-5 md:grid-cols-3 lg:gap-3 xl:gap-5">
 
-    <div class="group rounded-xl overflow-hidden grid cursor-context-menu bg-white shadow border transition-all duration-300">
-      <div class="grid gap-4 p-3">
-        <div class="w-full h-60 rounded-lg overflow-clip">
-          <img src="/assets/images/courses/graphic-design.jpg" alt="Graphic Design" class="w-full h-full object-cover">
+    <% courses.forEach((course, index) => { %>
+      <div data-aos="fade-up" data-aos-delay="<%= 50 + (index * 100) %>"
+        class="group rounded-xl overflow-hidden grid cursor-context-menu bg-white shadow border transition-all duration-300">
+        <div class="grid gap-4 p-3">
+          <div class="w-full h-60 rounded-lg overflow-clip">
+            <img src="<%= course.image %>" alt="<%= course.title %>" class="w-full h-full object-cover">
+          </div>
+      
+          <div>
+            <p class="font-semibold text-lg"><%= course.title %></p>
+            <p class="text-slate-500"><%= course.description %></p>
+          </div>
         </div>
-
-        <div>
-          <p class="font-semibold text-lg">Graphic Design</p>
-          <p class="text-slate-500">Adobe Photoshop | CorelDraw</p>
-        </div>
-      </div>
-
-      <div class="p-3 pt-5 mt-auto">
-        <div class="flex items-center justify-between gap-5">
-          <p class="text-slate-500">By: <span class="font-semibold text-midnight">Ofriend</span></p>
-        
-          <div class="flex items-center gap-3">
-            <span class="pi pi-shopping-cart text-slate-500"></span>
-            <div class="relative font-semibold">
-              <p class="absolute text-green-500 -translate-y-5">&#8358;0.00</p>
-              <p class="text-red-500 line-through">&#8358;200K</p>
+      
+        <div class="p-3 pt-5 mt-auto">
+          <div class="flex items-center justify-between gap-5">
+            <p class="text-slate-500">By: <span class="font-semibold text-midnight"><%= course.tutor %></span></p>
+      
+            <div class="flex items-center gap-3">
+              <span class="pi pi-shopping-cart text-slate-500"></span>
+              <div class="relative font-semibold">
+                <p class="absolute text-green-500 -translate-y-5">&#8358;<%= course.discountedPrice %></p>
+                <p class="text-red-500 line-through">&#8358;<%= course.price %>K</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="bg-midnight w-full h-1 mt-auto"></div>
-    </div>
-
-
-    <div
-      class="group rounded-xl overflow-hidden grid cursor-context-menu bg-white shadow border transition-all duration-300">
-      <div class="grid gap-4 p-3">
-        <div class="w-full h-60 rounded-lg overflow-clip">
-          <img src="/assets/images/courses/product-design.jpg" alt="Product Design" class="w-full h-full object-cover">
-        </div>
-    
-        <div>
-          <p class="font-semibold text-lg">Product Design</p>
-          <p class="text-slate-500">Figma | Adobe Illustrator</p>
-        </div>
+        <% if (index === 1) { %>
+          <div class="bg-aqua w-full h-1 mt-auto"></div>
+        <% } else { %>
+          <div class="bg-midnight w-full h-1 mt-auto"></div>
+        <% } %>
       </div>
-    
-      <div class="p-3 pt-5 mt-auto">
-        <div class="flex items-center justify-between gap-5">
-          <p class="text-slate-500">By: <span class="font-semibold text-midnight">Ofriend</span></p>
-    
-          <div class="flex items-center gap-3">
-            <span class="pi pi-shopping-cart text-slate-500"></span>
-            <div class="relative font-semibold">
-              <p class="absolute text-green-500 -translate-y-5">&#8358;0.00</p>
-              <p class="text-red-500 line-through">&#8358;325K</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    
-      <div class="bg-aqua w-full h-1 mt-auto"></div>
-    </div>
-
-
-    <div
-      class="group rounded-xl overflow-hidden grid cursor-context-menu bg-white shadow border transition-all duration-300">
-      <div class="grid gap-4 p-3">
-        <div class="w-full h-60 rounded-lg overflow-clip">
-          <img src="/assets/images/courses/web-dev.jpg" alt="Web Development" class="w-full h-full object-cover">
-        </div>
-    
-        <div>
-          <p class="font-semibold text-lg">Web Development</p>
-          <p class="text-slate-500">HTML | CSS | JavaScript.</p>
-        </div>
-      </div>
-    
-      <div class="p-3 pt-5 mt-auto">
-        <div class="flex items-center justify-between gap-5">
-          <p class="text-slate-500">By: <span class="font-semibold text-midnight">Ofriend</span></p>
-    
-          <div class="flex items-center gap-3">
-            <span class="pi pi-shopping-cart text-slate-500"></span>
-            <div class="relative font-semibold">
-              <p class="absolute text-green-500 -translate-y-5">&#8358;0.00</p>
-              <p class="text-red-500 line-through">&#8358;300K</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    
-      <div class="bg-midnight w-full h-1 mt-auto"></div>
-    </div>
-    
+    <% }) %>
   </div>
 </div>

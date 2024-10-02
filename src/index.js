@@ -7,10 +7,20 @@ const PORT = process.env.PORT || 4400;
 const routeHandler = require('./routes/routes');
 const helmet = require('helmet');
 const crypto = require('crypto');
+const cookieParser = require('cookie-parser');
 
 const app = express();
 
 //Middleware
+app.use(cookieParser(
+  process.env.SECRET_KEY,
+  {
+    httpOnly: true,
+    sameSite: 'none',
+    secure: true,
+  }
+));
+
 app.use((req, res, next) => {
   res.locals.nonce = crypto.randomBytes(16).toString('base64');
   next();
@@ -43,6 +53,7 @@ app.use('/fontsource', express.static(path.resolve('node_modules/@fontsource-var
 //Configurations
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
+
 
 app.use('/', routeHandler);
 app.use(function (req, res) {

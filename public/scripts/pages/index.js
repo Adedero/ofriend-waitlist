@@ -172,5 +172,14 @@ const countdown = setInterval(() => {
 }, 1000); 
 
 
+const cookieNotice = document.querySelector('.cookie-notice');
+const acceptBtn = document.querySelectorAll('.accept-cookie-btn');
+
+acceptBtn.forEach(btn => {
+  btn.onclick = () => {
+    cookieNotice.classList.add('hide');
+  }
+})
+
 
 

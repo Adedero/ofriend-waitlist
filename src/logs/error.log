@@ -1,0 +1,9 @@
+{"error":"Visitor.findOne is not a function","ip":"::ffff:127.0.0.1","level":"error","message":"Error processing visitor tracking","service":"user-service","timestamp":"2024-10-02T10:25:30.778Z"}
+{"error":"Visitor.findOne is not a function","ip":"::ffff:127.0.0.1","level":"error","message":"Error processing visitor tracking","service":"user-service","timestamp":"2024-10-02T10:25:31.864Z"}
+{"error":"Visitor.findOne is not a function","ip":"::ffff:127.0.0.1","level":"error","message":"Error processing visitor tracking","service":"user-service","timestamp":"2024-10-02T10:26:41.663Z"}
+{"error":"Visitor.findOne is not a function","ip":"::ffff:127.0.0.1","level":"error","message":"Error processing visitor tracking","service":"user-service","timestamp":"2024-10-02T10:26:42.744Z"}
+{"error":"Visitor.findOne is not a function","ip":"::ffff:127.0.0.1","level":"error","message":"Error processing visitor tracking","service":"user-service","timestamp":"2024-10-02T10:26:54.352Z"}
+{"error":"Visitor.findOne is not a function","ip":"::ffff:127.0.0.1","level":"error","message":"Error processing visitor tracking","service":"user-service","timestamp":"2024-10-02T10:26:55.372Z"}
+{"error":"SQLITE_ERROR: no such table: Visitors","ip":"::ffff:127.0.0.1","level":"error","message":"Error processing visitor tracking","service":"user-service","timestamp":"2024-10-02T10:39:43.942Z"}
+{"error":"SQLITE_ERROR: no such table: Visitors","ip":"::ffff:127.0.0.1","level":"error","message":"Error processing visitor tracking","service":"user-service","timestamp":"2024-10-02T10:39:44.144Z"}
+{"error":"SQLITE_ERROR: no such table: Visitors","ip":"::ffff:127.0.0.1","level":"error","message":"Error processing visitor tracking","service":"user-service","timestamp":"2024-10-02T10:39:45.135Z"}

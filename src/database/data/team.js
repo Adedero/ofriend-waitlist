@@ -37,7 +37,7 @@ const team = [
   {
     name: "Innocent Kalu",
     position: "Social Media Manager",
-    image: "/assets/images/team/chibuike-nwosu.jpg"
+    image: "/assets/images/team/innocent-kalu.jpg"
   }
 ]
 

@@ -1,21 +1,49 @@
+'use strict';
+
+const fs = require('fs');
+const path = require('path');
 const { Sequelize } = require('sequelize');
+const db = {};
 
 const sequelize = new Sequelize({
   dialect: 'sqlite',
-  storage: '../waitlist.db',
-  logging: false
+  storage: path.join(__dirname, './waitlist.db'),
+  logging: false,
 });
+
+const modelsDir = path.resolve(__dirname, '../models');
+
+fs
+  .readdirSync(modelsDir)
+  .filter(file => {
+    return file.includes('model')
+  })
+  .forEach(file => {
+    const model = require(path.join(modelsDir, file))(sequelize, Sequelize.DataTypes);
+    db[model.name] = model;
+  });
+
+Object.keys(db).forEach(modelName => {
+
+  if (db[modelName].associate) {
+    db[modelName].associate(db);
+  }
+});
+
 
 const db_init = async () => {
   try {
     await sequelize.authenticate();
-    await sequelize.sync({ force: true });
+    //await sequelize.sync({ alter: true });
     console.log('Database connection established.');
   } catch (error) {
     console.error('Unable to connect to the database:', error);
   }
-}
+};
+
 db_init();
 
+db.sequelize = sequelize;
+db.Sequelize = Sequelize;
 
-module.exports = sequelize;
+module.exports = db;

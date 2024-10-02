@@ -27,7 +27,9 @@
       </section>
 
       <%- include('../partials/_footer') %>
-
+      <% if (!cookieSession) { %>
+        <%- include('../partials/_cookie-notice') %>
+      <% } %>
     </main>
     <script src="/scripts/pages/index.js"></script>
     <%- include("../partials/_aos-init", { nonce }) %>
