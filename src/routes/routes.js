@@ -132,7 +132,7 @@ router.use(limiter).post('/subscribe', async (req, res) => {
     }
     res.render('pages/response', { response });
   } catch (error) {
-    //console.log(error);
+    console.log(error);
 
     if (error instanceof UniqueConstraintError) {
       if (error.errors.some(e => e.path === 'email')) {
