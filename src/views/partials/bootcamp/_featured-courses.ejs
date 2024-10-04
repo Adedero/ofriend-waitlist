@@ -7,13 +7,13 @@
     </div>
   </div>
 
-  <div class="mt-6 grid gap-5 md:grid-cols-3 lg:gap-3 xl:gap-5">
+  <div class="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-4 lg:gap-3 xl:gap-5">
 
     <% courses.forEach((course, index) => { %>
       <div data-aos="fade-up" data-aos-delay="<%= 50 + (index * 100) %>"
         class="group rounded-xl overflow-hidden grid cursor-context-menu bg-white shadow border transition-all duration-300">
-        <div class="grid gap-4 p-3">
-          <div class="w-full h-60 rounded-lg overflow-clip">
+        <div class="grid gap-3 p-3">
+          <div class="w-full h-48 rounded-lg overflow-clip bg-slate-300">
             <img src="<%= course.image %>" alt="<%= course.title %>" class="w-full h-full object-cover">
           </div>
       
