@@ -1,4 +1,0 @@
-{"ip":"::ffff:127.0.0.1","level":"info","message":"User visited page","route":"/","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0"}
-{"level":"info","message":"Failed to save session.","sessionId":"4ae07c89-2f4a-48f7-ac6e-744cc5fd6651"}
-{"ip":"::ffff:127.0.0.1","level":"info","message":"User visited page","route":"/service-worker.js","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0"}
-{"ip":"::ffff:127.0.0.1","level":"info","message":"User visited page","route":"/service-worker.js","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0"}
