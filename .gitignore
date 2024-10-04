@@ -1,3 +1,4 @@
 node_modules
 .env
 build.css
+src/database/waitlist.db
