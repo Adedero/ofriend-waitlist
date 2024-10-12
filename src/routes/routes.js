@@ -107,6 +107,15 @@ router.get('/bootcamp', (req, res) => {
   })
 });
 
+router.get('/bootcamp/virtual-training', (req, res) => {
+  const cookieSession = req.cookies.sessionId;
+
+  res.render('pages/virtual-training', {
+    nonce: res.locals.nonce,
+    cookieSession
+  })
+})
+
 router.get('/contact', (req, res) => {
   const cookieSession = req.cookies.sessionId;
 

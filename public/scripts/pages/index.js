@@ -125,13 +125,14 @@ links_sm.forEach((link) => setActiveLink(link));
 function setActiveLink(link) {
   const currentPath = window.location.pathname;
   const linkPath = new URL(link.href, window.location.origin).pathname;
-  if (currentPath === linkPath) {
+
+  // Ensure that the link path is an exact match or a parent of the current path
+  if (currentPath === linkPath || currentPath.startsWith(linkPath + '/')) {
     link.classList.add('active');
   } else {
     link.classList.remove('active');
   }
 }
-
 
 const backBtn = document.querySelectorAll('.back-btn');
 backBtn.forEach(btn => {

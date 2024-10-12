@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%-
+    include('../partials/_head', {
+      title: 'Ofriend - Virtual Training',
+      head: null
+    })
+  %>
+  <body> 
+    <%- include('../partials/_loader') %>
+    <%- include('../partials/_header') %>
+    <main>
+      <%- include('../partials/training/_training-nav') %>
+
+      <section class="bg-gradient-to-b from-aqua-100/80 to-white py-5 px-5 lg:px-10">
+        <%- include('../partials/training/_training-top') %>
+      </section>
+
+      <section class="py-5 px-5 lg:px-10 mt-10">
+
+      </section>
+
+      <%- include('../partials/_footer') %>
+      <% if (!cookieSession) { %>
+        <%- include('../partials/_cookie-notice') %>
+      <% } %>
+    </main>
+    <script src="/scripts/pages/index.js"></script>
+    <%- include("../partials/_aos-init", { nonce }) %>
+  </body>
+</html>
