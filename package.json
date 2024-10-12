@@ -23,6 +23,7 @@
     "mysql2": "^3.11.3",
     "primeicons": "^7.0.0",
     "sequelize": "^6.37.3",
+    "serve-favicon": "^2.5.0",
     "sqlite3": "^5.1.7",
     "uuid": "^10.0.0",
     "winston": "^3.14.2"

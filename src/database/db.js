@@ -19,7 +19,7 @@ const sequelize = process.env.NODE_ENV === 'production' ?
   logging: false,
 });
  */
-const modelsDir = path.resolve(__dirname, '../models');
+const modelsDir = path.join(__dirname, '../models');
 
 fs
   .readdirSync(modelsDir)
@@ -42,7 +42,7 @@ Object.keys(db).forEach(modelName => {
 const db_init = async () => {
   try {
     await sequelize.authenticate();
-    //await sequelize.sync({ alter: true });
+    await sequelize.sync({ alter: true });
     console.log('Database connection established.');
   } catch (error) {
     console.error('Unable to connect to the database:', error);

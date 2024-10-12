@@ -8,10 +8,20 @@ const routeHandler = require('./routes/routes');
 const helmet = require('helmet');
 const crypto = require('crypto');
 const cookieParser = require('cookie-parser');
+const favicon = require('serve-favicon');
 
 const app = express();
 
 //Middleware
+
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(express.static(path.join(__dirname, '../public')));
+app.use(favicon(path.join(__dirname, '../public', 'favicon.ico')))
+app.use('/primeicons', express.static(path.join(__dirname, '../node_modules/primeicons')));
+app.use('/fontsource', express.static(path.join(__dirname, '../node_modules/@fontsource-variable')));
+
+
 app.use(cookieParser(
   process.env.SECRET_KEY,
   {
@@ -37,19 +47,14 @@ app.use(
   })
 );
 
-app.use(function (req, res, next) {
+/* app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", req.header('origin'));
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Referer");
   res.header("Access-Control-Allow-Credentials", "true");
   next();
 });
 
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
-app.use(express.static(path.resolve('public')));
-app.use('/primeicons', express.static(path.resolve('node_modules/primeicons')));
-app.use('/fontsource', express.static(path.resolve('node_modules/@fontsource-variable')));
-
+ */
 //Configurations
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
