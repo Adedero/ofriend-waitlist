@@ -19,6 +19,8 @@
     "express": "^4.21.0",
     "express-rate-limit": "^7.4.0",
     "helmet": "^7.1.0",
+    "mongoose": "^8.7.0",
+    "mysql2": "^3.11.3",
     "primeicons": "^7.0.0",
     "sequelize": "^6.37.3",
     "sqlite3": "^5.1.7",

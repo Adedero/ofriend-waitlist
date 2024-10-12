@@ -1,16 +1,24 @@
 'use strict';
-
+require("dotenv").config();
 const fs = require('fs');
 const path = require('path');
 const { Sequelize } = require('sequelize');
 const db = {};
 
-const sequelize = new Sequelize({
+const sequelize = process.env.NODE_ENV === 'production' ?
+  new Sequelize(process.env.DB_NAME, process.env.DB_USERNAME, process.env.DB_PASSWORD, {
+    dialect: 'mysql'
+  }) :
+  new Sequelize('sqlite::memory:', {
+    logging: false
+  })
+
+/* const sequelize = new Sequelize({
   dialect: 'sqlite',
   storage: path.join(__dirname, './waitlist.db'),
   logging: false,
 });
-
+ */
 const modelsDir = path.resolve(__dirname, '../models');
 
 fs

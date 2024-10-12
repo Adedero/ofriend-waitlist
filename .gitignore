@@ -1,6 +1,4 @@
 node_modules
 .env
 build.css
-src/database/waitlist.db
-src/logs/error.log
-src/logs/site.log
+src/logs

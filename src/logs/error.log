@@ -1,1 +1,2 @@
 
+{"error":"SQLITE_ERROR: no such table: Visitors","ip":"::1","level":"error","message":"Error processing visitor tracking","service":"user-service","timestamp":"2024-10-12T08:08:34.867Z"}

@@ -99,8 +99,8 @@ router.get('/about', (req, res) => {
 router.get('/bootcamp', (req, res) => {
   const cookieSession = req.cookies.sessionId;
 
-  res.render('pages/bootcamp', { 
-    nonce: res.locals.nonce, 
+  res.render('pages/bootcamp', {
+    nonce: res.locals.nonce,
     response: false,
     courses,
     cookieSession
@@ -110,7 +110,7 @@ router.get('/bootcamp', (req, res) => {
 router.get('/contact', (req, res) => {
   const cookieSession = req.cookies.sessionId;
 
-  res.render('pages/contact', { 
+  res.render('pages/contact', {
     nonce: res.locals.nonce,
     cookieSession
   })
@@ -133,6 +133,15 @@ router.use(limiter).post('/subscribe', async (req, res) => {
     res.render('pages/response', { response });
   } catch (error) {
     console.log(error);
+    logger.error({
+      message: 'Error adding user to waitlist.',
+      error: error.message,
+      user: {
+        name: trimmedName,
+        email: trimmedEmail,
+      },
+      timestamp: Date.now(),
+    });
 
     if (error instanceof UniqueConstraintError) {
       if (error.errors.some(e => e.path === 'email')) {
