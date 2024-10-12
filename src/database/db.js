@@ -13,12 +13,6 @@ const sequelize = process.env.NODE_ENV === 'production' ?
     logging: false
   })
 
-/* const sequelize = new Sequelize({
-  dialect: 'sqlite',
-  storage: path.join(__dirname, './waitlist.db'),
-  logging: false,
-});
- */
 const modelsDir = path.join(__dirname, '../models');
 
 fs
@@ -42,7 +36,7 @@ Object.keys(db).forEach(modelName => {
 const db_init = async () => {
   try {
     await sequelize.authenticate();
-    await sequelize.sync({ alter: true });
+    if (process.env.NODE_ENV !== "production") await sequelize.sync({ alter: true });
     console.log('Database connection established.');
   } catch (error) {
     console.error('Unable to connect to the database:', error);
