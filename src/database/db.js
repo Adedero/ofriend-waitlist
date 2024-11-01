@@ -9,7 +9,9 @@ const sequelize = process.env.NODE_ENV === 'production' ?
   new Sequelize(process.env.DB_NAME, process.env.DB_USERNAME, process.env.DB_PASSWORD, {
     dialect: 'mysql'
   }) :
-  new Sequelize('sqlite::memory:', {
+  new Sequelize({
+    dialect: 'sqlite',
+    storage: ':memory:',
     logging: false
   })
 
