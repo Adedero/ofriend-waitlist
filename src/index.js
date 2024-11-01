@@ -11,6 +11,8 @@ const favicon = require('serve-favicon');
 
 const app = express();
 
+app.set('trust proxy', '1');
+
 //Middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());

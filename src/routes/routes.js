@@ -20,9 +20,11 @@ router.use(async (req, res, next) => {
   const cookieMaxAge = 3600000; // 1 hour
   const sessionId = req.cookies.sessionId;
   const ipAddress = req.ip;
-  const userAgent = req.headers['user-agent'];
+  const userAgent = req.headers['user-agent'] || 'unknown';
   const referrer = req.headers.referer || 'Direct';
   const visitTimestamp = new Date().toISOString();
+
+  console.log(req.headers['user-agent'], req.headers)
 
   try {
     if (sessionId) {
