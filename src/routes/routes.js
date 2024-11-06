@@ -24,8 +24,6 @@ router.use(async (req, res, next) => {
   const referrer = req.headers.referer || 'Direct';
   const visitTimestamp = new Date().toISOString();
 
-  console.log(req.headers['user-agent'], req.headers)
-
   try {
     if (sessionId) {
       const visitor = await Visitor.findOne({ where: { sessionId } });
