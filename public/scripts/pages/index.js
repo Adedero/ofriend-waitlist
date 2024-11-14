@@ -147,7 +147,7 @@ const secondsElement = document.querySelector('#seconds');
 
 
 // Set the target date and time
-const targetDate = new Date('November 10, 2024 23:59:59').getTime();
+const targetDate = new Date('November 20, 2024 23:59:59').getTime();
 
 // Function to update the countdown every second
 const countdown = setInterval(() => {
